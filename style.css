@@ -1,10 +1,8 @@
 :root{
-    --darkerColor: #8e793e;
-    --LighterColor: #ad974f;
-    --BackgroundColor: #231f20;
+    --darkerColor: #f9c841;
+    --LighterColor: #e6c660;
+    --BackgroundColor: #0a0a0a;
     --White:#eaeaea;
-
-
 }
 
 * {
@@ -16,32 +14,90 @@
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 150vh;
     width: 100%;
-    background-color: rgb(251, 255, 255);
+    background-color:var(--BackgroundColor);
+    font-family: 'imbue','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
 }
 
 
 header {
-    min-height: 15%;
-    background-color: rgb(242, 216, 245);
-    color: aliceblue;
+    min-height: 16%;
    display: flex;
-   align-items: center;
-   justify-content: center;
    flex-direction: column;
 }
 
 .headerTop{
     flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
     width: 100%;
-background-color: rgb(34, 33, 33);
+    background-color: var(--BackgroundColor);
 }
+
+.leftHeaderLinks {
+    align-content: center;
+}
+
+.leftHeaderLinks h1 {
+    color: var(--darkerColor);
+    margin: 30px;
+
+}
+
+.rightHeaderLinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+
+    
+
+   
+}
+.rightHeaderLinks a  {
+    text-decoration: none;
+    color: var(--darkerColor);
+    
+  
+ }
+
+ .rightHeaderLinks a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+ }
+
 .headerBottom {
+    display: flex;
     width: 100%;
     flex: 1;
-    background-color: rgb(244, 174, 34);
+    background-color:var(--LighterColor);
+    min-height: 40px;
+    align-items: center;
 
+
+}
+
+.goldLinks {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    font-family: 'Times New Roman', Times, serif;
+
+  
+    
+}
+
+.goldLinks a {
+    text-decoration: none;
+    color: var(--BackgroundColor);
+}
+
+.goldLinks a:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 section {
@@ -55,12 +111,12 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(53, 51, 51);
+    background-color: var(--BackgroundColor);
     width: 100%;
  
 }
 .container {
-    outline: solid 7px gold;
+    outline: solid 7px var(--darkerColor);
     width: 60%;
     height: 70%;
     display: flex;
@@ -71,39 +127,55 @@ section {
 
 .image {
     flex: 1;
-  background-color: rgb(104, 101, 96);
+ 
+}
+
+.image img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
 }
 
 .text {
-    flex: 2;
+    flex: 1;
     display: flex;
-
     flex-direction: column;
-    background-color: rgb(43, 41, 38);
+    background-color: var(--BackgroundColor);
     justify-content: space-evenly;
+    align-items: center;
   
 }
 
 h1{
  
-    color:gold;
+    color:var(--LighterColor);
     display: flex;
-    text-align: center
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    
+    
 }
 
 .text p {
-    color: aliceblue;
+    color: var(--White);
     text-align: center;
 
 }
 
 .text a {
-    background-color: aquamarine;
+    background-color: var(--LighterColor);
     padding: 4% 6%;
     border-radius: 40px;
     width: 40%;
     align-self: center;
     text-align: center;
+    min-width: 70px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text a:hover {
+    background-color: #c39d21;
+    cursor: pointer;
 }
 
 
@@ -111,7 +183,18 @@ h1{
 .middleBottom {
     flex: 1;
     display: flex;
-    background-color: rgb(45, 43, 43);
+    background-color: var(--BackgroundColor);
+}
+
+.secondBodyLeft {
+    height: 100%;
+}
+.imgContainer {
+    height: 100%;
+}
+.secondBodyLeft img {
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -125,6 +208,18 @@ h1{
     text-align: center;
 
 }
+
+h3 {
+    color: var(--LighterColor);
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.secondBodyRight p {
+    color: var(--White);
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .container {
 
 }
@@ -137,8 +232,8 @@ h1{
 
 
 .secondBodyRight a {
-    border: 1px solid gold;
-    color: gold;
+    border: 1px solid var(--LighterColor);
+    color: var(--LighterColor);
     padding: 4% 6%;
     border-radius: 40px;
     width: 40%;
@@ -146,11 +241,17 @@ h1{
     text-align: center;
 }
 
+.secondBodyRight a:hover {
+    cursor: pointer;
+    color: #eaeaea;
+    border-color: #eaeaea;
+}
+
 footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(250, 255, 253);
+    background-color: var(--BackgroundColor);
    
 
 }
